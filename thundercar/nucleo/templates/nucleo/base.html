@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> THUNDER CAR - ALQUILER DE VEHICULOS </title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'nucleo/img/logo.ico'%}" type="imagenlogo.ico">
+    <link rel="stylesheet" href="{% static 'nucleo/css/style.css'%}">
+  </head>
+
+  <body> 
+    <header>  
+      <img id="marca1" src="{% static 'nucleo/img/logo-autonombre-sbg1.png'%}"  alt="imagen-logo pagina">
+      <img id="marca2" src="{% static 'nucleo/img/logo-autonombre-sbg2.png'%}"  alt="imagen-logo pagina">
+           
+      <h1>THUNDER CAR</h1>
+      <h2>ALQUILER DE VEHICULOS</h2>
+      <h3>BIENVENIDO</h3>
+                  
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">INICIO</a></li>
+          <li><a href="{% url 'quienessomos' %}">QUIENES SOMOS</a></li>
+          <li><a href="{% url 'requisitos' %}">REQUISITOS</a></li>
+          <li><a href="{% url 'nuestraflota' %}">NUESTRA FLOTA</a></li>
+          <li><a href="{% url 'contacto' %}">CONTACTO</a></li>
+          <li><a href="{% url 'listado' %}">LISTADO</a></li>
+        </ul>
+      </nav>
+    </header>
+         
+    <div id="carrusel">
+      <div class="lista_imagenes">
+        <img src="{% static 'nucleo/img/imagen1p.jpg'%}" alt="imagen1-carrusel">
+        <img src="{% static 'nucleo/img/imagen2p.jpg'%}" alt="imagen2-carrusel">
+        <img src="{% static 'nucleo/img/imagen3p.jpg'%}" alt="imagen3-carrusel">
+        <img src="{% static 'nucleo/img/imagen4p.jpg'%}" alt="imagen4-carrusel">
+        <img src="{% static 'nucleo/img/imagen5p.jpg'%}" alt="imagen5-carrusel">
+        <img src="{% static 'nucleo/img/imagen6p.jpg'%}" alt="imagen-carrusel">
+        <img src="{% static 'nucleo/img/imagen7p.jpg'%}" alt="imagen7-carrusel">
+        <img src="{% static 'nucleo/img/imagen8p.jpg'%}" alt="imagen8-carrusel">
+        <img src="{% static 'nucleo/img/imagen9p.jpg'%}" alt="imagen9-carrusel">
+        <img src="{% static 'nucleo/img/imagen10p.jpg'%}" alt="imagen10-carrusel">
+        <img src="{% static 'nucleo/img/imagen11p.jpg'%}" alt="imagen11-carrusel">
+        <img src="{% static 'nucleo/img/imagen12p.jpg'%}" alt="imagen12-carrusel">
+        <img src="{% static 'nucleo/img/imagen13p.jpg'%}" alt="imagen13-carrusel">
+      </div>
+    </div>
+                
+    <section id="contenido">
+      <div id="section">
+          {% block content %}{% endblock %}
+      </div> 
+              
+      <div id="aside">
+        <h4>SUCURSALES</h4>  
+        <article class="articulo1">SUCURSAL 1<br>
+          Capital Federal<br>
+          DIRECCION<br>
+          Baéz 920 - CABA
+        </article>
+        <article class="articulo1">SUCURSAL 2<br>
+          Ezeiza (Bs. As.)<br>
+          DIRECCION<br>
+          French 1620 - Ezeiza
+        </article>
+        <article class="articulo1">SUCURSAL 3<br>
+          Córdoba (Córdoba)<br>
+          DIRECCION<br>
+          Jujuy 829 - Córdoba
+        </article>
+        <article class="articulo1">SUCURSAL 4<br>
+          Mendoza (Mendoza)<br>
+          DIRECCION<br>
+          Chacabuco 3224 - Cidudad de Mendoza
+        </article>
+        <article class="articulo1">SUCURSAL 5<br>
+          Bariloche (Río Negro)<br>
+          DIRECCION<br>
+          Fragnano 1112 - San Carlos de Bariloche
+        </article>
+        <article class="articulo1">SUCURSAL 6<br>
+          Salta (Salta)<br>
+          DIRECCION<br>
+          Mendoza 3224 - Ciudad de Salta
+        </article>
+      </div>
+    </section>       
+
+    <footer>
+      <article class="articulo2"> 
+        <p>AV REPUBLICA ARGENTINA 2023<br>
+           BUENOS AIRES - ARGENTINA<br></p>     
+      </article>
+      <article class="articulo2"> 
+        <p>NUESTRAS REDES SOCIALES<br>
+        <i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255);"></i> 
+        <i class="fa-brands fa-whatsapp" style="color: rgb(255, 255, 255);"></i>
+        <i class="fa-brands fa-facebook" style="color: rgb(255, 255, 255);"></i></p>
+      </article>
+      <article class="articulo2"> 
+        Todos los derechos reservados &copy;2023 - THUNDER CAR
+      </article>  
+    </footer>
+
+    <script src="https://kit.fontawesome.com/f553cf9348.js" crossorigin="anonymous"></script>
+   </body>
+</html>

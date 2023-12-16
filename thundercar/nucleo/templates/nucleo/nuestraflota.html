@@ -1,0 +1,42 @@
+{% extends "nucleo/base.html" %}
+
+{% block content %} 
+{% load static %}
+<h4>NUESTRA FLOTA</h4>
+        <div>
+          <article class="articuloc">CATEGORIA URBANO</article>
+          <div id="contenido-urbano">
+            <img src="{% static 'nucleo/img/urbano-onix.jpg'%}" alt="C. Urbano - Chevrolet Onix">
+            <img src="{% static 'nucleo/img/urbano-gol.jpg'%}" alt="C. Urbano - VW Gol">
+            <img src="{% static 'nucleo/img/urbano-etios.jpg'%}" alt="C. Urbano - Toyota Etios">
+            <img src="{% static 'nucleo/img/urbano-spark.png'%}" alt="C. Urbano - Chevrolet Spark">  
+          </div>
+        </div>
+        <div>
+          <article class="articuloc">CATEGORIA SEDAN</article>
+            <div id="contenido-urbano">
+              <img src="{% static 'nucleo/img/sedan-onixplus.jpg'%}" alt="C. Sedan - Chevrolet Onix Plus">
+              <img src="{% static 'nucleo/img/sedan-prisma.jpg'%}" alt="C. Sedan - Chevrolet Prisma">
+              <img src="{% static 'nucleo/img/sedan-versa.jpg'%}" alt="C. Sedan - Nissan Versa"> 
+              <img src="{% static 'nucleo/img/sedan-corolla.png'%}" alt="C. Sedan - Toyota Corolla">  
+            </div>
+        </div>
+        <div>
+          <article class="articuloc">CATEGORIA SUV</article>
+          <div id="contenido-urbano">
+            <img src="{% static 'nucleo/img/suv-mercedes.png'%}" alt="C. SUV - Mercedes Benz">
+            <img src="{% static 'nucleo/img/suv-explorer.jpg'%}" alt="C. SUV - Ford Explorer">
+            <img src="{% static 'nucleo/img/suv-renegade.jpg'%}" alt="C. SUV - Jeep Renegade">
+            <img src="{% static 'nucleo/img/suv-suv4.jpg'%}" alt="C. SUV - Toyota SUV4">  
+          </div>
+        </div>
+        <div>
+          <article class="articuloc">CATEGORIA EJECUTIVO</article>
+           <div id="contenido-urbano">
+            <img src="{% static 'nucleo/img/ejecutivo-vento.jpg'%}" alt="C. Ejecutivo - VW Vento">
+            <img src="{% static 'nucleo/img/ejecutivo-honda.png'%}" alt="C. Ejecutivo - Honda Civic">
+            <img src="{% static 'nucleo/img/ejecutivo-mazda.jpg'%}" alt="C. Ejecutivo - Mazda 3">
+            <img src="{% static 'nucleo/img/ejecutivo-cruze.jpg'%}" alt="C. Ejecutivo - Chevrolet Cruze">  
+          </div>
+        </div> 
+{% endblock %}

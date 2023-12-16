@@ -1,0 +1,35 @@
+{% extends "contacto/base.html" %}
+
+{% block content %} 
+
+<table>
+    <thead>
+        <tr>
+            <td id="listado" colspan="7"><h3>LISTADO DE CONTACTOS</h3></td>
+        </tr>
+        <tr>    
+            <th>APELLIDO</th>
+            <th>NOMBRE</th>
+            <th>DNI</th>
+            <th>FECHA NACIMIENTO</th>
+            <th>EMAIL</th>
+            <th>IMAGEN</th>
+            <th>CONSULTA</th>
+            <th>ACCION</th>
+        </tr>
+    </thead>
+    {% for contacto in contactos %}
+        <tr>
+            <td>{{ contacto.apellido }}</td>
+            <td>{{ contacto.nombre }}</td>
+            <td>{{ contacto.dni }}</td>
+            <td>{{ contacto.fecNac | date:"d/m/Y" }}</td>
+            <td>{{ contacto.email }}</td>
+            <td><a href="{{ contacto.adjuntar.url }}" target="_blank">Adjunto</a></td>
+            <td>{{ contacto.consulta }}</td>
+            <td><a href="{% url 'delete' contacto.pk %}">Borrar</a></td>
+        </tr>
+         
+    {% endfor %}
+</table>
+{% endblock %}

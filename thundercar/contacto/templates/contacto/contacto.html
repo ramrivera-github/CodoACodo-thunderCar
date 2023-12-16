@@ -1,0 +1,26 @@
+{% extends "nucleo/base.html" %}
+
+{% block content %} 
+<h4>CONTACTO</h4>          
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset>
+      <legend> DATOS PERSONALES </legend><br>
+      <label for="apellido" name="apellido" id="apellido"> Apellido </label><br>
+      <input type="text" name="apellido" id="apellido" required><br>
+      <label for="nombre" name="nombre" id="nombre"> Nombre </label><br>
+      <input type="text" name="nombre" id="nombre" required> <br>
+      <label for="dni"> DNI </label><br>
+      <input type="number" name="dni" id="dni" min="1000000" max="99000000" required><br>
+      <label for="fecNac" > Fecha de Nacimiento </label><br>
+      <input type="date" name="fecNac" id="fecNac" required><br>
+      <label for="email"> e-Mail </label><br>
+      <input type="email" name="email" id="email" required> <br> 
+      <label for="adjuntar"> Adjuntar foto DNI</label><br>
+      <input type="file" name="adjuntar" id="adjuntar"><br><br>    
+      <label for="consulta">CONSULTA</label><br>
+      <textarea cols="100" rows="20" name="consulta"></textarea> 
+    </fieldset>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+{% endblock %}

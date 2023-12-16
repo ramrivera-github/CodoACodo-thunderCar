@@ -1,0 +1,22 @@
+{% extends "nucleo/base.html" %}
+
+{% block content %}
+{% load static %}
+<h4>CATEGORIAS</h4>
+        <article class="articulo">CATEGORIA URBANO<br>
+          <img class="imgcat" src="{% static 'nucleo/img/urbano.jpg'%}" alt="auto urbano">
+          <p class="pcat">La mejor opción para realizar trayectos cortos en una ciudad. Por sus dimensiones son vehículos ágiles para el tránsito urbano y convenientes a la hora de estacionar. Poseen un bajo consumo lo que los convierte en la categoría más económica tanto a la hora de contratar como para el uso diario.</p>
+        </article>
+        <article class="articulo">CATEGORIA SEDAN<br>
+          <img class="imgcat" src="{% static 'nucleo/img/sedan.jpg'%}" alt="sedan">
+          <p class="pcat">Conocidos por su excelente capacidad de baúl los sedanes están dirigidos a quienes a la hora de viajar priorizan el equipaje sobre todas las cosas.</p>
+        </article>
+        <article class="articulo">CATEGORIA SUV<br>
+          <img class="imgcat" src="{% static 'nucleo/img/suv.jpg'%}" alt="suv">
+          <p class="pcat">El segmento automotor de mayor auge en los últimos años, posee una estética aventurera que invita a salir fuera de las rutas y adentrarse a lo desconocido. Su mayor despeje del suelo permite desplazarse con tranquilidad en caminos de ripio u offroad.</p>
+        </article>
+        <article class="articulo">CATEGORIA EJECUTIVO<br>
+          <img class="imgcat" src="{% static 'nucleo/img/ejecutivo.jpg'%}" alt="ejecutivo">
+          <p class="pcat">Es la opción dirigida a los clientes más exigentes quienes desean desplazarse con el mayor confort disponible. Por sus mecánicas y dimensiones resultan ideales para moverse por rutas y autopistas con total seguridad.</p>
+        </article>
+{% endblock %}
