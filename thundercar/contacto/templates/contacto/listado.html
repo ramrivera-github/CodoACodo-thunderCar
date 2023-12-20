@@ -25,7 +25,7 @@
             <td>{{ contacto.dni }}</td>
             <td>{{ contacto.fecNac | date:"d/m/Y" }}</td>
             <td>{{ contacto.email }}</td>
-            <td><a href="{{ contacto.adjuntar.url }}" target="_blank">Adjunto</a></td>
+            <td>{% if contacto.adjuntar %} <a href=" {{contacto.adjuntar.url}} " target="_blank">Adjunto</a>{% endif %}</td>
             <td>{{ contacto.consulta }}</td>
             <td><a href="{% url 'delete' contacto.pk %}">Borrar</a></td>
         </tr>
